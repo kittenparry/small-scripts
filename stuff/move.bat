@@ -42,3 +42,4 @@ MOVE *.gz folder.oth\
 MOVE *.azw3 folder.oth\
 MOVE *.mobi folder.oth\
 MOVE *.log folder.oth\
+MOVE *.jar folder.oth\
