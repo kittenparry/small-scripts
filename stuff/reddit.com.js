@@ -15,7 +15,7 @@ function checkKeyPressed(e){
 			case 78:
 				window.location=document.querySelector('a[rel="nofollow next"]').href;
 				break;
-			case 82: //r
+			/*case 82: //r
 				//window.location=document.querySelector('a[class="random choice"]').href;
 				window.location='https://www.reddit.com/r/random/';
 				break;
@@ -24,7 +24,7 @@ function checkKeyPressed(e){
 				//window.location=$('a:contains("randnsfw")').attr('href');
 				window.location='https://www.reddit.com/r/randnsfw/';
 				break;
-			/*case 85: //u
+			case 85: //u
 				$('.up:first').trigger('click');
 				break;
 			case 73: //i
