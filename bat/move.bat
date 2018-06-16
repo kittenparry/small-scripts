@@ -16,10 +16,10 @@ SET ie=.jpg .png .gif .jpeg
 SET we=.webm
 SET ee=.exe .msi
 SET ce=.rar .zip .7z .dmg
-SET ve=.mp4 .avi .flv .ts .mov .vmw .mkv .3gp .m4v .mpg
+SET ve=.mp4 .avi .flv .ts .mov .wmv .mkv .3gp .m4v .mpg
 SET oe=.pdf .mp3 .txt .iso .docx .rtf .svg .js .pptx .doc
 SET oe2=.m4a .html .css .ogg .xlsx .gz .azw3 .mobi .log .jar
-SET oe3=.scs .swf .ods .db .xml .ini .sh .php
+SET oe3=.scs .swf .ods .db .xml .ini .sh .php .ogx .save
 
 MD %t% %i% %w% %e% %c% %v% %o%
 FOR %%a IN (%te%) DO MOVE *%%a %t%
