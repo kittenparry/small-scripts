@@ -1,8 +1,8 @@
-#bodyContent{
+#bodyContent {
 	background:#F0F0F0;
 	color:#36454F;
-}
+	}
 body, #ca-view, #ca-edit, #ca-watch, #ca-history, #ca-unwatch,
-#ca-nstab-user, #ca-nstab-help, #ca-talk, #mw-head, #content{
+#ca-nstab-user, #ca-nstab-help, #ca-talk, #mw-head, #content {
 	background:#F0F0F0;
-}
+	}
