@@ -1,8 +1,3 @@
-//Custom js to add keyboard shortcuts for reddit.com.
-//n for next page
-//b for previous
-//r for random subreddit
-//t for randnsfw
 window.addEventListener("keydown",checkKeyPressed,false);
 function checkKeyPressed(e){
 	type=e.target.getAttribute("type");
@@ -15,7 +10,8 @@ function checkKeyPressed(e){
 			case 78:
 				window.location=document.querySelector('a[rel="nofollow next"]').href;
 				break;
-			/*case 82: //r
+			/* disabled tests below
+			case 82: //r
 				//window.location=document.querySelector('a[class="random choice"]').href;
 				window.location='https://www.reddit.com/r/random/';
 				break;
@@ -35,7 +31,8 @@ function checkKeyPressed(e){
 				break;
 			case 50: //2
 				//$('.comment.collapsed .expand:eq(-1)').trigger('click');
-				break;*/
+				break;
+			*/
 			default:
 		}
 	}

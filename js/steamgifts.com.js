@@ -1,6 +1,3 @@
-//Custom js to add keyboard shortcuts for steamgifts.com
-//n for next page
-//b for previous
 window.addEventListener("keydown",checkKeyPressed,false);
 function checkKeyPressed(e){
 	type=e.target.getAttribute("type");
