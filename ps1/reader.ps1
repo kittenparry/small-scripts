@@ -1,0 +1,1 @@
+powershell -command "tree /f > manifest.txt"
