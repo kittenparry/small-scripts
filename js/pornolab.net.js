@@ -1,7 +1,8 @@
 window.addEventListener("keydown",checkKeyPressed,false);
 function checkKeyPressed(e){
     type=e.target.getAttribute("type");
-    if(type!='text'){
+	tag=e.target.tagName.toLowerCase();
+	if(type!='text'&&tag!='textarea'){
         switch(e.keyCode){
             case 66:
                 check(false);
