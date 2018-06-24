@@ -20,6 +20,7 @@ SET ve=.mp4 .avi .flv .ts .mov .wmv .mkv .3gp .m4v .mpg
 SET oe=.pdf .mp3 .txt .iso .docx .rtf .svg .js .pptx .doc
 SET oe2=.m4a .html .css .ogg .xlsx .gz .azw3 .mobi .log .jar
 SET oe3=.scs .swf .ods .db .xml .ini .sh .php .ogx .save
+SET oe4=.htmlz .h .class
 
 MD %t% %i% %w% %e% %c% %v% %o%
 FOR %%a IN (%te%) DO MOVE *%%a %t%
@@ -28,4 +29,4 @@ FOR %%a IN (%we%) DO MOVE *%%a %w%
 FOR %%a IN (%ee%) DO MOVE *%%a %e%
 FOR %%a IN (%ce%) DO MOVE *%%a %c%
 FOR %%a IN (%ve%) DO MOVE *%%a %v%
-FOR %%a IN (%oe%, %oe2%, %oe3%) DO MOVE *%%a %o%
+FOR %%a IN (%oe%, %oe2%, %oe3%, %oe4%) DO MOVE *%%a %o%
