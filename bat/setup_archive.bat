@@ -1,2 +1,6 @@
 REM Archive folder setup
-md books documentaries games games\nsfw games\oth games\sfw images movies music music\live_footage music\to_check oth porn porn\animu porn\jav porn\mango porn\pics porn\unorganised porn\vids programs series series\one series\many sports
+SET g=games
+SET m=music
+SET p=porn
+SET s=series
+MD books documentaries %g% %g%\nsfw %g%\oth %g%\sfw images movies %m% %m%\live_footage %m%\to_check oth %p% %p%\animu %p%\jav %p%\mango %p%\pics %p%\unorganised %p%\vids programs %s% %s%\one %s%\many sports
