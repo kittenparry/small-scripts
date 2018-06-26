@@ -1,9 +1,9 @@
 #Creates a tree for archive/downloads folders in each drive
-#then copies them to the dated Google Drive folder
+#then copies them to the dated folders in Google Drive
 
 #SET paths, drive letters array
-$al =":\Archive\"
-$dl =":\Downloads\"
+$al = ":\Archive\"
+$dl = ":\Downloads\"
 $d = @('D', 'E', 'F', 'G', 'H', 'I', 'J')
 #SET cmd, fnames
 $cmd = "TREE /F > "
@@ -14,7 +14,7 @@ $fne = "-tree.txt"
 $g = "F:\Google Drive\Other\Trees\"
 $dt = Get-Date -UFormat "%Y.%m.%d"
 $gdl = $g + $dt
-#COPY to Google Driver function
+#COPY to Google Drive function
 FUNCTION ctd($p){
 	IF(Test-Path -Path $gdl){}ELSE{
 		New-Item -ItemType directory -Path $gdl
