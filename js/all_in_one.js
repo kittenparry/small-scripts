@@ -43,26 +43,16 @@ wl = window.location;
 //true = n, false = b
 function pag(p){
 	if(p){
-		if(n[0])
-			wl = n[0];
-		if(n[1])
-			wl = n[1];
-		if(n[2])
-			wl = n[2];
-		if(n[3])
-			wl = n[3];
-		if(n[4])
-			wl = n[4];
+		if(n[0]) wl = n[0];
+		if(n[1]) wl = n[1];
+		if(n[2]) wl = n[2];
+		if(n[3]) wl = n[3];
+		if(n[4]) wl = n[4];
 	}else{
-		if(b[0])
-			wl = b[0];
-		if(b[1])
-			wl = b[1];
-		if(b[2])
-			wl = b[2];
-		if(b[3])
-			wl = b[3];
-		if(b[4])
-			wl = b[4];
+		if(b[0]) wl = b[0];
+		if(b[1]) wl = b[1];
+		if(b[2]) wl = b[2];
+		if(b[3]) wl = b[3];
+		if(b[4]) wl = b[4];
 	}
 }
