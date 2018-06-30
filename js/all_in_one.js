@@ -32,44 +32,47 @@ function checkKeyPressed(e){
  * maybe check if values are null first, then run the functions, if it isn't working that is
  * i think it does crash the program if the values are null, haven't tested this but tested a different one
  * i think pornolab.net's one would directly break the whole thing, commenting it out
+ * it doesn't break if i try to make an array from the values, does it?
  * ...
  */
-//vars
-nhentai_net_n = document.querySelector('a[class="next"]').href;
-nhentai_net_b = document.querySelector('a[class="previous"]').href;
-pornbay_org_n = document.querySelector('a[class="pager pager_next"]').href;
-pornbay_org_b = document.querySelector('a[class="pager pager_prev"]').href;
-//pornolab_org_n
-//pornolab_org_b
-rarbg_to_n = document.querySelector('a[title="next page"]').href;
-rarbg_to_b = document.querySelector('a[title="previous page"]').href;
-reddit_com_n = document.querySelector('a[rel="nofollow next"]').href;
-reddit_com_b = document.querySelector('a[rel="nofollow prev"]').href;
-steamgifts_com_n = document.querySelector('i[class="fa fa-angle-right"]').parentNode.href;
-steamgifts_com_b = document.querySelector('i[class="fa fa-angle-left"]').parentNode.href;
+//var arrays
+n = [
+	document.querySelector('a[class="next"]').href,							//nhentai.net
+	document.querySelector('a[class="pager pager_next"]').href,				//pornbay.org
+	document.querySelector('a[title="next page"]').href,					//rarbg.to
+	document.querySelector('a[rel="nofollow next"]').href,					//reddit.com
+	document.querySelector('i[class="fa fa-angle-right"]').parentNode.href,	//steamgifts.com
+]
+b = [
+	document.querySelector('a[class="previous"]').href,						//nhentai.net
+	document.querySelector('a[class="pager pager_prev"]').href,				//pornbay.org
+	document.querySelector('a[title="previous page"]').href,				//rarbg.to
+	document.querySelector('a[rel="nofollow prev"]').href,					//reddit.com
+	document.querySelector('i[class="fa fa-angle-left"]').parentNode.href,	//steamgifts.com
+]
 //true = n, false = b
 //nhentai.net
-function nhentai_net(n){
-	if(n){
-		if(nhentai_net_n)
-			window.location = nhentai_net_n;
+function nhentai_net(p){
+	if(p){
+		if(n[0])
+			window.location = n[0];
 	}else{
-		if(nhentai_net_b)
-			window.location = nhentai_net_b;
+		if(b[0])
+			window.location = b[0];
 	}
 }
 //pornobay.org
-function pornbay_org(n){
-	if(n){
-		if(pornobay_org_n)
-			window.location = pornbay_org_n;
+function pornbay_org(p){
+	if(p){
+		if(n[1])
+			window.location = n[1];
 	}else{
-		if(pornobay_org_b)
-			window.location = pornbay_org_b;
+		if(b[1])
+			window.location = b[1];
 	}
 }
 //pornolab.net
-function pornolab_net(n){
+function pornolab_net(p){
 	patt = /start/g;
 	winlo = window.location.href;
 	wlos = winlo.split('=').reverse();
@@ -79,7 +82,7 @@ function pornolab_net(n){
 		bo_page = false;
 	}
 	if(bo_page){
-		if(n){
+		if(p){
 			wlos[0] = parseInt(wlos[0]) + 50;
 			window.location = wlos.reverse().join('=');
 		}else{
@@ -87,38 +90,38 @@ function pornolab_net(n){
 			window.location = wlos.reverse().join('=');
 		}
 	}else{
-		if(n){
+		if(p){
 			window.location = winlo + "&start=50";
 		}
 	}
 }
 //rarbg.to
-function rarbg_to(n){
-	if(n){
-		if(rarbg_to_n)
-			window.location = rarbg_to_n;
+function rarbg_to(p){
+	if(p){
+		if(n[2])
+			window.location = n[2];
 	}else{
-		if(rarbg_to_b)
-			window.location = rarbg_to_b;
+		if(b[2])
+			window.location = b[2];
 	}
 }
 //reddit.com
-function reddit_com(n){
-	if(n){
-		if(reddit_com_n)
-			window.location = reddit_com_n;
+function reddit_com(p){
+	if(p){
+		if(n[3])
+			window.location = n[3];
 	}else{
-		if(reddit_com_b)
-			window.location = reddit_com_b;
+		if(b[3])
+			window.location = b[3];
 	}
 }
 //steamgifts.com
-function steamgifts_com(n){
-	if(n){
-		if(steamgifts_com_n)
-			window.location = steamgifts_com_n;
+function steamgifts_com(p){
+	if(p){
+		if(n[4])
+			window.location = n[4];
 	}else{
-		if(steamgifts_com_b)
-			window.location = steamgifts_com_b;
+		if(b[4])
+			window.location = b[4];
 	}
 }
