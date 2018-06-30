@@ -5,10 +5,10 @@ function checkKeyPressed(e){
 	if(type!='text'&&tag!='textarea'){
 		switch(e.keyCode){
 			case 66:
-				window.location=document.querySelector('a[title="previous page"]').href;
+				window.location=document.querySelector('li[class="previous"]').firstChild.href;
 				break;
 			case 78:
-				window.location=document.querySelector('a[title="next page"]').href;
+				window.location=document.querySelector('li[class="next"]').firstChild.href;
 				break;
 			default:
 		}
