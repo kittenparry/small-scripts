@@ -37,18 +37,18 @@ function checkKeyPressed(e){
  */
 //var arrays
 n = [
-	document.querySelector('a[class="next"]').href,							//nhentai.net
+	document.querySelector('a[class="next"]').href,						//nhentai.net
 	document.querySelector('a[class="pager pager_next"]').href,				//pornbay.org
 	document.querySelector('a[title="next page"]').href,					//rarbg.to
 	document.querySelector('a[rel="nofollow next"]').href,					//reddit.com
-	document.querySelector('i[class="fa fa-angle-right"]').parentNode.href,	//steamgifts.com
+	document.querySelector('i[class="fa fa-angle-right"]').parentNode.href,			//steamgifts.com
 ]
 b = [
-	document.querySelector('a[class="previous"]').href,						//nhentai.net
+	document.querySelector('a[class="previous"]').href,					//nhentai.net
 	document.querySelector('a[class="pager pager_prev"]').href,				//pornbay.org
 	document.querySelector('a[title="previous page"]').href,				//rarbg.to
 	document.querySelector('a[rel="nofollow prev"]').href,					//reddit.com
-	document.querySelector('i[class="fa fa-angle-left"]').parentNode.href,	//steamgifts.com
+	document.querySelector('i[class="fa fa-angle-left"]').parentNode.href,			//steamgifts.com
 ]
 //true = n, false = b
 //nhentai.net
