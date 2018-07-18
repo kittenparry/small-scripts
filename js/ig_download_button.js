@@ -23,8 +23,8 @@ function checkKeyPressed(e){
 
 //With Material Icons
 //document.getElementsByTagName("head")[0].innerHTML += '<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">';
-//test2 = '<a href="' + document.querySelector("meta[property='og:image']").getAttribute('content') + '" style="color:#7f8a94;"><div style="position:fixed; bottom:50%; right:0px; border-radius:15px 0px 0px 15px; background:#faf0e6; padding:5px; border:2px solid #7f8a94; border-right-style: none;"><i class="material-icons">arrow_downward</i></div></a>';
+//test2 = '<a href="' + document.querySelector("meta[property='og:image']").getAttribute('content') + '" style="color:#7f8a94;"><div style="position:fixed; bottom:50%; right:0px; border-radius:15px 0px 0px 15px; background:#faf0e6; padding:5px; border:2px solid #7f8a94; border-right-style:none;"><i class="material-icons">arrow_downward</i></div></a>';
 
 //Without Material Icons
-test3 = '<a href="' + document.querySelector("meta[property='og:image']").getAttribute('content') + '" style="color:#7f8a94;"><div style="position:fixed; bottom:50%; right:0px; border-radius:15px 0px 0px 15px; background:#faf0e6; padding:13px; border:2px solid #7f8a94; border-right-style: none;"><i style="border:solid black; border-width:0 3px 3px 0; display:inline-block; padding:3px; transform:rotate(45deg); -webkit-transform:rotate(45deg);"></i></div></a>';
+test3 = '<a href="' + document.querySelector("meta[property='og:image']").getAttribute('content') + '" style="color:#7f8a94;"><div style="position:fixed; bottom:50%; right:0px; border-radius:15px 0px 0px 15px; background:#faf0e6; padding:13px; border:2px solid #7f8a94; border-right-style:none;"><i style="border:solid black; border-width:0 3px 3px 0; display:inline-block; padding:3px; transform:rotate(45deg); -webkit-transform:rotate(45deg);"></i></div></a>';
 document.body.innerHTML += test3;
