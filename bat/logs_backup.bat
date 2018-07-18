@@ -1,4 +1,4 @@
-REM copies myLogs.txt and Logs/ to different partitions
+REM copies myLogs.txt and Logs\ to different partitions
 
 SET dl=D E F G H I J
 SET lo=:\_logs\
