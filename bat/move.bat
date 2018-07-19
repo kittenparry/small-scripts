@@ -1,7 +1,13 @@
 REM Creates the folders for my downloads folder
 REM and puts files to their places
 
-REM Set folder names
+REM SET and CD to the downloads folder
+SET dh=I
+SET dl=:\Downloads.old3
+%dh%:
+CD %dh%%dl%
+
+REM SET folder names
 SET t=f.torrent
 SET i=f.img
 SET w=f.webm
@@ -10,7 +16,7 @@ SET c=f.comp
 SET v=f.vid
 SET o=f.oth
 
-REM Set extensions
+REM SET extensions
 SET te=.torrent
 SET ie=.jpg .png .gif .jpeg
 SET we=.webm

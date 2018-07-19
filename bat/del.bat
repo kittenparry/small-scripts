@@ -1,4 +1,4 @@
-REM deletes unnecessary files from torrents in %x%:\Archive\porn
+REM deletes unnecessary files from torrents in %dl%:\Archive\porn
 REM DEL /S /F *.nfo *.diz *.exe *.dat
 
 SET x=:\Archive\porn\
