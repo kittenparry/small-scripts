@@ -26,7 +26,7 @@ SET ve=.mp4 .avi .flv .ts .mov .wmv .mkv .3gp .m4v .mpg
 SET oe=.pdf .mp3 .txt .iso .docx .rtf .svg .js .pptx .doc
 SET oe2=.m4a .html .css .ogg .xlsx .gz .azw3 .mobi .log .jar
 SET oe3=.scs .swf .ods .db .xml .ini .sh .php .ogx .save
-SET oe4=.htmlz .h .class
+SET oe4=.htmlz .h .class .rpa .rpy
 
 MD %t% %i% %w% %e% %c% %v% %o%
 FOR %%a IN (%te%) DO MOVE *%%a %t%
