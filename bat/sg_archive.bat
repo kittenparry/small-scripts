@@ -16,4 +16,3 @@ FOR /D %%f IN (*.*) DO (
 	CD ..
 	RMDIR /S /Q %%f
 )
-PAUSE

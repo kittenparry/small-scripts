@@ -16,4 +16,3 @@ FOR %%a IN (%dl%) DO (
 	COPY %n% %%a%lo%%n%
 	COPY %ll%*.txt %%a%lo%%ll%*.txt
 )
-PAUSE
