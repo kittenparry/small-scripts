@@ -2,7 +2,7 @@ REM Zips SuicideGirls folders with appropriate names
 REM and moves zips to the Google Drive folder
 REM then moves folders to the parent directory
 
-SET sgp="F:\Google Drive\Photos\Inappropriate\SuicideGirlsdotcom"
+SET sgp="F:\Google Drive\fromPC\SuicideGirls.com"
 SET sgd=F
 SET sgl=:\_suicidegirls\__n\
 %sgd%:
