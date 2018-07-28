@@ -5,4 +5,4 @@ SET rp="I:\Downloads.old3\f.folder\RPA Extractor for Windows"
 SET rl=I
 %rl%:
 CD %rp%
-FOR %%a IN (%1\*.rpa) DO rpaextractor -x %%a -o %2
+FOR %%a IN (%1\*.rpa) DO rpaextractor -x "%%a" -o %2
