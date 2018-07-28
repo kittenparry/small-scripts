@@ -1,3 +1,4 @@
+//not working, can't tell why
 window.addEventListener("keydown",checkKeyPressed,false);
 function checkKeyPressed(e){
 	type=e.target.getAttribute("type");
@@ -14,4 +15,3 @@ function checkKeyPressed(e){
 		}
 	}
 }
-//not working, can't tell why
