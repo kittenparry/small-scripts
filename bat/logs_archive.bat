@@ -1,5 +1,5 @@
 REM copies myLogs.txt to Logs\ with dates
-REM %d% is (yyyy-mm-dd) if %date% is ee dd/mm/yyyy
+REM %d% is (yyyy-mm-dd) if %date% is eee dd/mm/yyyy
 
 SET dl=F
 SET lo=:\Google Drive\Other
