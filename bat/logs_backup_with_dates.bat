@@ -1,5 +1,5 @@
 REM copies myLogs.txt and Logs\ to different partitions with dates
-REM %d% is (yyyy-mm-dd) if %date% is eee dd/mm/yyyy
+REM %d% is yyyy-mm-dd if %date% is eee dd/mm/yyyy
 
 SET d=%date:~10,4%-%date:~4,2%-%date:~7,2%
 SET dl=D E F G H I J
