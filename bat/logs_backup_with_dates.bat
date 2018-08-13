@@ -1,7 +1,9 @@
-REM copies myLogs.txt and Logs\ to different partitions
+REM copies myLogs.txt and Logs\ to different partitions with dates
+REM %d% is (yyyy-mm-dd) if %date% is eee dd/mm/yyyy
 
+SET d=%date:~10,4%-%date:~4,2%-%date:~7,2%
 SET dl=D E F G H I J
-SET lo=:\_logs\latest_logs\
+SET lo=:\_logs\archived_logs\%d%\
 SET gd=F
 SET gl=:\Google Drive\Other\
 SET ll=Logs\
