@@ -4,7 +4,7 @@
 #SET paths, drive letters array
 $al = ":\Archive\"
 $dl = ":\Downloads\"
-$d = @('D', 'E', 'F', 'G', 'H', 'I', 'J')
+$d = @('D', 'E', 'F', 'G', 'H', 'I', 'J', 'K')
 #SET cmd, fnames
 $cmd = "TREE /F > "
 $fna = "Archive-"

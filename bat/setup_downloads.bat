@@ -1,6 +1,6 @@
 REM Torrent downloads folder setup in different drives
 
-SET dl=D E F G H I J
+SET dl=D E F G H I J K
 SET l=:\Downloads\
 
 SET g=games
