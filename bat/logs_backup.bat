@@ -1,13 +1,25 @@
 REM copies myLogs.txt and Logs\ to different partitions
 
-SET dl=D E F G H I J K
-SET lo=:\_logs\latest_logs\
+SET dll=D E F G H I J K
+SET lp=_logs\latest_logs\
+SET lo=:\%lp%
 SET gd=F
+SET dl=:\Dropbox\
 SET gl=:\Google Drive\Other\
 SET ll=Logs\
 SET n=myLogs.txt
 
-FOR %%a IN (%dl%) DO (
+REM Dropbox COPY below, needs cleaning up
+%gd%:
+CD %gd%%dl%
+MD %gd%%dl%%lp%
+MD %gd%%dl%%lp%%ll%
+CD %gd%%gl%
+COPY %n% %gd%%dl%%lp%%n%
+COPY %ll%*.txt %gd%%dl%%lp%%ll%*.txt
+
+REM different drives COPY below
+FOR %%a IN (%dll%) DO (
 	%%a:
 	MD %%a%lo%
 	MD %%a%lo%%ll%
