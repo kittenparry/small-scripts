@@ -28,3 +28,6 @@ FOR %%a IN (%dll%) DO (
 	COPY %n% %%a%lo%%n%
 	COPY %ll%*.txt %%a%lo%%ll%*.txt
 )
+
+REM IDEAS
+REM zip instead of directly copying?
