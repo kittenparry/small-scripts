@@ -9,5 +9,4 @@ FOR %%a IN (%l%) DO (
 	ROBOCOPY "%lo%" "%%a%p%" /MIR /DCOPY:T
 )
 ROBOCOPY "%lo%" "F:\Google Drive\Other\Archived\Compressed\cdi" /MIR /DCOPY:T
-
 PAUSE

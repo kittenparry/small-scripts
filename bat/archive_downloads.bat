@@ -52,5 +52,4 @@ ECHO %loc%
 REM E:\Archive\porn\pics\jeff_milton with p
 REM uncomment below
 REM ROBOCOPY %1 %loc% /MOVE /DCOPY:T
-
 PAUSE
