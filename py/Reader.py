@@ -2,7 +2,6 @@ import os
 import io
 import sys
 
-
 '''
 Usage in command line:
 >Python reader.py manifest.txt

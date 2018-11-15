@@ -18,7 +18,7 @@ SET o=f.oth
 
 REM SET extensions
 SET te=.torrent
-SET ie=.jpg .png .gif .jpeg .bmp
+SET ie=.jpg .png .gif .jpeg .bmp .webp
 SET we=.webm
 SET ee=.exe .msi
 SET ce=.rar .zip .7z .dmg
