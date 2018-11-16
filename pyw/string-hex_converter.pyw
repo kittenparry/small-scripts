@@ -86,6 +86,6 @@ class Gui(tk.Frame):
 if __name__ == '__main__':
     root = tk.Tk()
     root.title("String-Hex Converter")
-    root.geometry("280x180+500+100")
+    root.geometry("280x180+800+100")
     app = Gui(master=root)
     app.mainloop()

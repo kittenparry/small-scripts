@@ -1,4 +1,4 @@
 REM backs up compressed files folder using ROBOCOPY
 
-ROBOCOPY "F:\Archive\oth\cd" "G:\Archive\oth\cd" /MIR /DCOPY:T
+ROBOCOPY "F:\632d66696c6573\6364" "G:\632d66696c6573\6364" /MIR /DCOPY:T
 PAUSE
