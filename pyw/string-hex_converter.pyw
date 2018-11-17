@@ -2,11 +2,10 @@ import tkinter as tk
 import binascii
 
 '''
-String-Hex Converter
-A small GUI program to convert a string of text to hex and vice versa.
-Shortcuts:
-Enter - Str to Hex and select all of the results
-Ctrl + C - Copies the results (duh) and selects all of the input  
+	A small GUI program to convert a string of text to hex and vice versa.
+	Shortcuts:
+	Enter - Str to Hex and select all of the results
+	Ctrl + C - Copies the results (duh) and selects all of the input  
 '''
 class Gui(tk.Frame):
     def __init__(self, master=None):
