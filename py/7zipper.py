@@ -15,7 +15,6 @@ import sys
         Del files afterwards (as an argumental option (don't del if blank?))
             "7zipper.py p -d" vs "7zipper.py p" for example?
         Display the filesize for folders as well
-        Maybe place another safeguard to prevent more than 2 arguments
 '''
 def seven_zip(pword, d):
     path_7z = r"C:\Program Files\7-Zip\7z.exe"
@@ -44,19 +43,23 @@ def strings(s):
     str = {
         "f_size": "{} files, {}.",
         "err_d": "Usage: 7zipper.py -d password",
+        "err_arg": "Only 2 arguments are allowed.\nUse quotes for special characters in the password.",
     }
     return str.get(s)
 
 if __name__ == '__main__':
-    try:
-        arg2 = sys.argv[2]
-    except:
-        arg2 = None
-    if sys.argv[1] == "-s": #only -s
-        app = file_size()
-    elif sys.argv[1] == "-d" and arg2 is None: #don't accept -d
-        print(strings("err_d"))
-    elif sys.argv[1] == "-d" and arg2 is not None: #-d password
-        seven_zip(arg2, sys.argv[1])
-    elif sys.argv[1] == sys.argv[-1]: #only password
-        seven_zip(sys.argv[1], "")
+    if len(sys.argv) <= 3:
+        try:
+            arg2 = sys.argv[2]
+        except IndexError:
+            arg2 = None
+        if sys.argv[1] == "-s": #only -s
+            app = file_size()
+        elif sys.argv[1] == "-d" and arg2 is None: #don't accept -d
+            print(strings("err_d"))
+        elif sys.argv[1] == "-d" and arg2 is not None: #-d password
+            seven_zip(arg2, sys.argv[1])
+        elif sys.argv[1] == sys.argv[-1]: #only password
+            seven_zip(sys.argv[1], "")
+    else:
+        print(strings("err_arg"))
