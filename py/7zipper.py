@@ -15,9 +15,7 @@ import sys
         Del files afterwards (as an argumental option (don't del if blank?))
             "7zipper.py p -d" vs "7zipper.py p" for example?
         Display the filesize for folders as well
-        Maybe sys.argv[-1] as password so it looks like:
-            7zipper.py -d pass or 7zipper.py pass or 7zipper.py -s
-        instead of 7zipper.py pass -d 
+        Maybe place another safeguard to prevent more than 2 arguments
 '''
 def seven_zip(pword, d):
     path_7z = r"C:\Program Files\7-Zip\7z.exe"
@@ -44,19 +42,15 @@ def del_files():
     print("del files")
 
 if __name__ == '__main__':
-    if sys.argv[1] == "-s":
+    try:
+        arg2 = sys.argv[2]
+    except:
+        arg2 = None
+    if sys.argv[1] == "-s": #only -s
         app = file_size()
-    else:
-        try:
-            app = seven_zip(sys.argv[1], sys.argv[2])
-        #try:
-        #    if sys.argv[2] == "-d":
-        #        del_files()
-        except Exception as e:
-            try:
-                app = seven_zip(sys.argv[1], "")
-            except Exception as e:
-                #print("2nd: {}".format(e))
-                pass
-            #print("1st: {}".format(e))
-            pass
+    elif sys.argv[1] == "-d" and arg2 is None: #don't accept -d
+        print("Usage: 7zipper.py -d password")
+    elif sys.argv[1] == "-d" and arg2 is not None: #-d password
+        seven_zip(arg2, sys.argv[1])
+    elif sys.argv[1] == sys.argv[-1]: #only password
+        seven_zip(sys.argv[1], "")
