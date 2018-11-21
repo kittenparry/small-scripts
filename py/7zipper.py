@@ -37,9 +37,15 @@ def file_size():
     fsize = 0
     for file in files:
         fsize += os.stat(file).st_size
-    print("{} files, {}.".format(len(files), convert_bytes(fsize)))
+    print(strings("f_size").format(len(files), convert_bytes(fsize)))
 def del_files():
     print("del files")
+def strings(s):
+    str = {
+        "f_size": "{} files, {}.",
+        "err_d": "Usage: 7zipper.py -d password",
+    }
+    return str.get(s)
 
 if __name__ == '__main__':
     try:
@@ -49,7 +55,7 @@ if __name__ == '__main__':
     if sys.argv[1] == "-s": #only -s
         app = file_size()
     elif sys.argv[1] == "-d" and arg2 is None: #don't accept -d
-        print("Usage: 7zipper.py -d password")
+        print(strings("err_d"))
     elif sys.argv[1] == "-d" and arg2 is not None: #-d password
         seven_zip(arg2, sys.argv[1])
     elif sys.argv[1] == sys.argv[-1]: #only password
