@@ -1,6 +1,7 @@
 import os
 import subprocess
 import sys
+import shutil
 
 '''
     Usage in command line after navigating to the desired folder:
@@ -12,20 +13,24 @@ import sys
     >7zipper.py -s
     Displays the number of files and their total size in a folder
     TODO:
-        Del files afterwards (as an argumental option (don't del if blank?))
-            "7zipper.py p -d" vs "7zipper.py p" for example?
         Display the filesize for folders as well
 '''
 def seven_zip(pword, d):
     path_7z = r"C:\Program Files\7-Zip\7z.exe"
     zname = os.getcwd().split('\\')[-1].encode('utf-8').hex()
-    #files = [os.listdir(os.curdir)]
-    files = [f for f in os.listdir(os.curdir)]
-    cmd = r'"{}" a "{}" "{}" -p"{}" -mhe=on -mx0'.format(path_7z, zname, ".", pword)
+    temp_dir = os.getcwd().split(":\\")[0] + ":\\__7zipper_temp"
+    if not os.path.exists(temp_dir):
+        os.makedirs(temp_dir)
+    zloc = temp_dir + "\\" + zname
+    cmd = r'"{}" a "{}" "{}" -p"{}" -mhe=on -mx0'.format(path_7z, zloc, ".", pword)
     subprocess.call(cmd, shell=True)
     if d == "-d":
-        print("-d")
-        #recursive folder/file removal below
+        try:
+            shutil.rmtree(os.curdir)
+        except:
+            pass
+        os.rename(zloc + ".7z", os.getcwd() + "\\" + zname + ".7z")
+        os.rmdir(temp_dir)
 def convert_bytes(num):
     for x in ['bytes', 'KB', 'MB', 'GB', 'TB']:
         if num < 1024.0:
@@ -37,8 +42,6 @@ def file_size():
     for file in files:
         fsize += os.stat(file).st_size
     print(strings("f_size").format(len(files), convert_bytes(fsize)))
-def del_files():
-    print("del files")
 def strings(s):
     str = {
         "f_size": "{} files, {}.",
