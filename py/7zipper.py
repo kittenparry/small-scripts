@@ -9,11 +9,13 @@ import shutil
     Creates an archive with all the data in a folder
     Adds password protection, encrypted file names, no compression
     Archives are named after the hexadecimal value of the current directory
-    Work in progress.............
+    >7zipper.py -d password
+    Deletes the zipped files/folders afterwards 
     >7zipper.py -s
     Displays the number of files and their total size in a folder
     TODO:
         Display the filesize for folders as well
+        Add an option to do everything without a password, i.e. pass an empty field?
 '''
 def seven_zip(pword, d):
     path_7z = r"C:\Program Files\7-Zip\7z.exe"
@@ -29,7 +31,8 @@ def seven_zip(pword, d):
             shutil.rmtree(os.curdir)
         except:
             pass
-        os.rename(zloc + ".7z", os.getcwd() + "\\" + zname + ".7z")
+    os.rename(zloc + ".7z", os.getcwd() + "\\" + zname + ".7z")
+    if os.path.exists(temp_dir):
         os.rmdir(temp_dir)
 def convert_bytes(num):
     for x in ['bytes', 'KB', 'MB', 'GB', 'TB']:
