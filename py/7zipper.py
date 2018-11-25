@@ -6,16 +6,17 @@ import shutil
 '''
     Usage in command line after navigating to the desired folder:
     >7zipper.py password
-    Creates an archive with all the data in a folder
-    Adds password protection, encrypted file names, no compression
-    Archives are named after the hexadecimal value of the current directory
+        Creates an archive with all the data in a folder
+        Adds password protection, encrypted file names, no compression
+        Archives are named after the hexadecimal value of the current directory
     >7zipper.py -d password
-    Deletes the zipped files/folders afterwards 
+        Deletes the zipped files/folders afterwards 
     >7zipper.py -s
-    Displays the number of files and their total size in a folder
+        Displays the number of files and their total size in a folder
     TODO:
         Display the filesize for folders as well
         Add an option to do everything without a password, i.e. pass an empty field?
+        Remove -d check from 2 places
 '''
 def seven_zip(pword, d):
     path_7z = r"C:\Program Files\7-Zip\7z.exe"
