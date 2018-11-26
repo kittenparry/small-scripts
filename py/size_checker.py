@@ -3,7 +3,7 @@ import os
 '''
     Usage in command line after navigating to the desired folder:
     >size_checker.py
-    Prints out the number and total size of all files in a folder.
+        Prints out the number and total size of all files in a folder.
 '''
 def convert_bytes(num):
     for x in ['bytes', 'KB', 'MB', 'GB', 'TB']:

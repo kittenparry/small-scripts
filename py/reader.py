@@ -5,10 +5,10 @@ import sys
 '''
 	Usage in command line:
 	>Python reader.py manifest.txt
-	Creates a list of files in the current dir and subdirs to 'manifest.txt/html'
-	which will be placed to the current directory
-	Needs the absolute location of reader.py if it's in a different location
-	You can remove sys.argv[1] and get rid of file variable for a static filename
+		Creates a list of files in the current dir and subdirs to 'manifest.txt/html'
+		which will be placed to the current directory
+		Needs the absolute location of reader.py if it's in a different location
+		You can remove sys.argv[1] and get rid of file variable for a static filename
 '''
 class reader():
     def __init__(self, file):
