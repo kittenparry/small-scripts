@@ -17,15 +17,14 @@ class Gui(tk.Frame):
         self.row_mid.grid(row=1, column=0)
         self.row_bot.grid(row=2, column=0, sticky="ew", padx=(10,0))
         self.var = int()
-        self.strings()
         self.add_elements()
     def add_elements(self):
         self.text_top = tk.Text(self.row_top, width=30, height=4, wrap='word')
         self.text_bot = tk.Text(self.row_bot, width=30, height=4, wrap='word', state='disabled')
         self.text_top.bind("<Return>", self.str_to_hex_event)
         self.text_bot.bind("<Control-c>", self.txt_copy)
-        self.butt_left = tk.Button(self.row_mid, text=self.str_butt_left, command=self.str_to_hex)
-        self.butt_right = tk.Button(self.row_mid, text=self.str_butt_right, command=self.hex_to_str)
+        self.butt_left = tk.Button(self.row_mid, text=strings("butt_left"), command=self.str_to_hex)
+        self.butt_right = tk.Button(self.row_mid, text=strings("butt_right"), command=self.hex_to_str)
         self.scrolly_top = tk.Scrollbar(self.row_top, orient='vertical', command=self.text_top.yview)
         self.scrolly_bot = tk.Scrollbar(self.row_bot, orient='vertical', command=self.text_bot.yview)
         self.text_top.configure(yscrollcommand=self.scrolly_top.set)
@@ -67,7 +66,7 @@ class Gui(tk.Frame):
         try:
             self.dump = binascii.a2b_hex(self.text_top.get('1.0', 'end - 1c')).decode('utf-8', 'ignore')
         except binascii.Error:
-            self.dump = self.str_hex_err
+            self.dump = strings("err_hex")
         self.text_bot.delete('1.0', 'end')
         self.text_bot.insert('end', self.dump)
         self.text_bot.configure(state='disabled')
@@ -77,14 +76,18 @@ class Gui(tk.Frame):
         txt.tag_add('sel', '1.0', 'end - 1c')
     def txt_copy(self, event):
         self.sel_all(self.text_top)
-    def strings(self):
-        self.str_butt_left = "Str to Hex"
-        self.str_butt_right = "Hex to Str"
-        self.str_hex_err = "Error: Non-hexadecimal digit!"
+
+def strings(s):
+    str = {
+        "butt_left": "Str to Hex",
+        "butt_right": "Hex to Str",
+        "err_hex": "Error: Non-hexadecimal digit!",
+    }
+    return str.get(s)
 
 if __name__ == '__main__':
     root = tk.Tk()
     root.title("String-Hex Converter")
-    root.geometry("280x180+800+100")
+    root.geometry("280x180+500+100")
     app = Gui(master=root)
     app.mainloop()
