@@ -2,7 +2,7 @@ window.addEventListener("keydown",checkKeyPressed,false);
 function checkKeyPressed(e){
 	type=e.target.getAttribute("type");
 	tag=e.target.tagName.toLowerCase();
-	if(type!='text'&&tag!='textarea'){
+	if(type!='text'&&tag!='textarea'&&type!='search'){
 		switch(e.keyCode){
 			case 66:
 				window.location=document.querySelector('a[class="previous"]').href;
