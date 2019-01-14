@@ -62,11 +62,11 @@ def start():
         try:
             if not os.path.exists(path):
                 os.makedirs(path)
-        except (NotADirectoryError, OSError) as e:
-            if e is NotADirectoryError:
-                print(f"NotADirectoryError: {e}")
-            else:
-                print(f"OSError: {e}")
+        except NotADirectoryError as e:
+            print(f"NotADirectoryError: {e}")
+            return
+        except OSError as e:
+            print(f"OSError: {e}")
             return
         try:
             links = open(SRC).read().split('\n')
