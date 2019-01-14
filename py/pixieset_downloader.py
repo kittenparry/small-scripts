@@ -60,6 +60,15 @@ def start():
         set_name = sys.argv[2]
         path = os.getcwd() + f"\\sets\\{date}--{set_name}\\"
         try:
+            if not os.path.exists(path):
+                os.makedirs(path)
+        except (NotADirectoryError, OSError) as e:
+            if e is NotADirectoryError:
+                print(f"NotADirectoryError: {e}")
+            else:
+                print(f"OSError: {e}")
+            return
+        try:
             links = open(SRC).read().split('\n')
         except IOError:
             print(strings("err_io"))
@@ -72,15 +81,6 @@ def start():
         new_links = []
         for link in links:
             new_links.append(link.replace("medium", "xxlarge"))
-        try:
-            if not os.path.exists(path):
-                os.makedirs(path)
-        except (NotADirectoryError, OSError) as e:
-            if e is NotADirectoryError:
-                print(f"NotADirectoryError: {e}")
-            else:
-                print(f"OSError: {e}")
-            return
         archive_links(path)
         download_images(new_links, path)
     else:
