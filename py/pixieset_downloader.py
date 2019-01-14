@@ -11,6 +11,7 @@ import sys
     
     DOCS:
         SRC: path to the source file.
+    !!! !!! !!! You need to manually add links to the SRC file.
             Use Firefox, ALT + T + I, select all media and paste it into SRC file.
         STRS: dictionary of string messages.
         ASSETS: list of unnecessary links that will be removed from the source list.
