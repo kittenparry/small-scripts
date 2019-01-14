@@ -21,7 +21,8 @@ import sys
             path: current working directory + \sets\date-set_name\
                 this is where the images will be downloaded
             links: temporary list of links taken from SRC
-            new_links: list of links with a replaced url for the high resolution image. 
+            new_links: list of links with a replaced URL for the high resolution image.
+                note "medium" might need to be something else.
         archive_links(path): moves SRC to the path along with the downloaded images.
             creates a new SRC file in its place. 
             name: SRC file will be renamed to this at path
@@ -29,14 +30,12 @@ import sys
         get_opener(): user-agent
         download_images(links, path): downloads images from the list of new_links to the path.
             total_time: to keep the track of all time that has passed downloading.
-            name: splits the url to get the file name
+            name: splits the URL to get the file name
             start: beginning time of the download
             urllib.request.urlretrieve(): download link to path + name
             end: ending time of the download
             passed: time passed for one image download.
 '''
-#Manuel entry is needed
-#Use Firefox, ALT + T + I, select all media and paste into source.txt
 SRC = r"source.txt"
 STRS = {
     "err_args": "2 arguments are needed. Example:\npixieset_downloader.py 19-01-14 serenity",
@@ -50,35 +49,28 @@ ASSETS = [
     "https://assets.pixieset.com/images/site/image-protect.gif",
     "https://assets.pixieset.com/images/site/cover-arrow.png",
 ]
+
 def strings(s):
     return STRS.get(s)
 
 def start():
     if len(sys.argv) == 3:
-        date = sys.argv[1] #YY-MM-DD
-        set_name = sys.argv[2] #set-name
-        #edit path here
+        date = sys.argv[1]
+        set_name = sys.argv[2]
         path = os.getcwd() + f"\\sets\\{date}--{set_name}\\"
-        #read links from source
         try:
             links = open(SRC).read().split('\n')
         except IOError:
-            #exit in case SRC isn't found
             print(strings("err_io"))
             return
-        #remove unnecessary links from list
         for link in ASSETS:
             try:
                 links.remove(link)
             except:
                 pass
-        #second list for the changed names
         new_links = []
-        #change medium to xxlarge
-        #note "medium" might need to be something else
         for link in links:
             new_links.append(link.replace("medium", "xxlarge"))
-        #create path if it doesn't exist
         if not os.path.exists(path):
             os.makedirs(path)
         archive_links(path)
@@ -86,11 +78,9 @@ def start():
     else:
         print(strings("err_args"))
 
-#archive links to the download folder
 def archive_links(path):
     name = "_Archive-%s.txt" % path.split('\\')[-2]
     var = 1
-    #rename archive if it already exists
     while os.path.isfile(path + name):
         name = name.split(".")[-2]
         try:
@@ -111,18 +101,14 @@ def download_images(links, path):
     total_time = 0
     get_opener()
     for link in links:
-        #split filename from link
         name = link.split('/')[-1]
         print(strings("down") % link)
         start = time.time()
-        #download here
         urllib.request.urlretrieve(link, path + name)
         end = time.time()
         passed = end - start
         total_time += passed
         print(strings("comp") % passed)
-        #maybe add a random wait period?
-        #time.sleep(random.randint(1, 5))
     print(strings("all_comp") % (len(links), total_time))
 
 
