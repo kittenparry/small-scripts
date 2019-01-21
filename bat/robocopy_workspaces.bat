@@ -11,5 +11,6 @@ SET r=ROBOCOPY
 %r% "D:\photoshopworkspace" "%g%photoshop" %a%
 %r% "D:\pycharmworkspace" "%g%pycharm" %a%
 %r% "D:\renpyworkspace" "%g%renpy" %a%
+%r% "D:\visualcodestudioworkspace" "%g%vscode" %a%
 %r% "D:\webstormworkspace" "%g%webstorm" %a%
 PAUSE
