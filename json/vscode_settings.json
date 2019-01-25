@@ -1,0 +1,11 @@
+{
+    "editor.wordWrap": "on",
+    "workbench.colorTheme": "Solarized Light",
+    "workbench.startupEditor": "newUntitledFile",
+    "search.showLineNumbers": true,
+    "editor.renderIndentGuides": false,
+    "editor.tabSize": 2,
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#D6D0BF",
+    }
+}
