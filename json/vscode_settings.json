@@ -7,5 +7,7 @@
     "editor.tabSize": 2,
     "workbench.colorCustomizations": {
         "editor.selectionBackground": "#D6D0BF",
-    }
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
 }
