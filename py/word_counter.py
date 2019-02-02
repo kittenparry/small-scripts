@@ -25,7 +25,9 @@ def start():
     split_logs = logs.split()
     #remove everything that isn't an alphanumerical value
     for word in split_logs:
-        cut.append(''.join(filter(str.isalpha, word)))
+        val = ''.join(filter(str.isalpha, word))
+        if val != '':
+            cut.append(val)
 
     cloud = sorted(Counter(cut).items(), key=lambda x: x[1])
     cloud.reverse()
@@ -35,6 +37,7 @@ def start():
             f.write("%s\n" % str(l))
     except IOError as e:
         print(e)
+
 
 if __name__ == '__main__':
     start()
