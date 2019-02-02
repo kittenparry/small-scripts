@@ -25,7 +25,7 @@ def start():
     split_logs = logs.split()
     #remove everything that isn't an alphanumerical value
     for word in split_logs:
-        cut.append(''.join(filter(str.isalnum, word)))
+        cut.append(''.join(filter(str.isalpha, word)))
 
     cloud = sorted(Counter(cut).items(), key=lambda x: x[1])
     cloud.reverse()
