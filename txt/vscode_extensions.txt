@@ -1,0 +1,9 @@
+#code --list-extensions
+
+Dart-Code.dart-code
+Dart-Code.flutter
+dsznajder.es7-react-js-snippets
+Equinusocio.vsc-material-theme
+ms-python.python
+ms-vscode.Theme-MarkdownKit
+streetsidesoftware.code-spell-checker
