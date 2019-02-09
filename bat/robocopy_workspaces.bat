@@ -7,6 +7,7 @@ SET r=ROBOCOPY
 %r% "D:\androidstudio" "%g%androidstudio" %a%
 %r% "D:\codeblocksworkspace" "%g%codeblocks" %a%
 %r% "D:\eclipseworkspace" "%g%eclipse" %a%
+%r% "D:\git" "%g%git" %a%
 %r% "D:\intelliJworkspace" "%g%intelliJ" %a%
 %r% "D:\photoshopworkspace" "%g%photoshop" %a%
 %r% "D:\pycharmworkspace" "%g%pycharm" %a%
