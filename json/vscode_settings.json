@@ -11,4 +11,6 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "breadcrumbs.enabled": true,
+    "svgviewer.enableautopreview": true,
+    "editor.suggestOnTriggerCharacters": false
 }
