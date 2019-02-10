@@ -1,1 +1,3 @@
-.redesign-beta-optin, #chat-app {display:none}
+.redesign-beta-optin, #chat-app {
+  display: none;
+}
