@@ -1,6 +1,8 @@
 #code --list-extensions
 
 2gua.rainbow-brackets
+CoenraadS.bracket-pair-colorizer
+cssho.vscode-svgviewer
 Dart-Code.dart-code
 Dart-Code.flutter
 dsznajder.es7-react-js-snippets
@@ -8,5 +10,10 @@ Equinusocio.vsc-material-theme
 formulahendry.auto-rename-tag
 ms-python.python
 ms-vscode.Theme-MarkdownKit
+oderwat.indent-rainbow
+pranaygp.vscode-css-peek
+Shan.code-settings-sync
 streetsidesoftware.code-spell-checker
+wayou.vscode-todo-highlight
+wix.vscode-import-cost
 Zignd.html-css-class-completion
