@@ -8,4 +8,3 @@ SET d=(%date:~10,4%-%date:~4,2%-%date:~7,2%)
 %dl%:
 CD %dl%%lo%
 COPY myLogs.txt Logs\myLogs%d%.txt
-PAUSE
