@@ -12,5 +12,14 @@
     "files.trimFinalNewlines": true,
     "breadcrumbs.enabled": true,
     "svgviewer.enableautopreview": true,
-    "editor.suggestOnTriggerCharacters": false
+    "editor.suggestOnTriggerCharacters": false,
+    "indentRainbow.colors": [
+        "rgba(65, 60, 88, 0.2)",
+        "rgba(27, 153, 139, 0.2)",
+        "rgba(244, 91, 105, 0.2)",
+    ],
+    "indentRainbow.includedLanguages": ["python"],
+    "[plaintext]": {
+        "files.insertFinalNewline": false,
+    }
 }
