@@ -94,8 +94,8 @@ else if(cur_loc.includes('reddit.com')){
 
 try{
 	if(nav_spcl){
-		window.addEventListener("keydown", (e) => check_nav_key_press(e, pqsel, nqsel, nav_spcl), false);
+		window.addEventListener('keydown', (e) => check_nav_key_press(e, pqsel, nqsel, nav_spcl), false);
 	}else{
-		window.addEventListener("keydown", (e) => check_nav_key_press(e, pqsel, nqsel), false);
+		window.addEventListener('keydown', (e) => check_nav_key_press(e, pqsel, nqsel), false);
 	}
 }catch(e){}
