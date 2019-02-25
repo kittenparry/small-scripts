@@ -1,6 +1,7 @@
 #code --list-extensions
 
 2gua.rainbow-brackets
+be5invis.toml
 CoenraadS.bracket-pair-colorizer
 cssho.vscode-svgviewer
 Dart-Code.dart-code
@@ -12,6 +13,7 @@ ms-python.python
 ms-vscode.Theme-MarkdownKit
 oderwat.indent-rainbow
 pranaygp.vscode-css-peek
+rust-lang.rust
 Shan.code-settings-sync
 streetsidesoftware.code-spell-checker
 wayou.vscode-todo-highlight
