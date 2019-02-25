@@ -27,5 +27,6 @@
 	// "git.enableSmartCommit": true,
 	// "git.autofetch": true,
 	"editor.detectIndentation": false,
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"editor.parameterHints.enabled": false
 }
