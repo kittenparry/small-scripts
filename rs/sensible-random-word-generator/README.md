@@ -3,10 +3,14 @@
 Generates random words based on given length and given repetition value as arguments.
 
 `cargo run` prints out a random word with the length of 10. Ex. output:  
-`Xopznepaov`
+```
+Xopznepaov
+```
 
 `cargo run 25` prints a word with the length of 25. If no argument is provided default length of 10 will be used. Ex. output:  
-`Mojbfuhgakditeodbeqwdojum`
+```
+Mojbfuhgakditeodbeqwdojum
+```
 
 `cargo run 20 5` prints out 5 words with the lengths of 20. If no second argument is given the default value 1 will be used for repetition. Ex. output:  
 ```
