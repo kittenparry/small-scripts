@@ -15,30 +15,30 @@ Stuff I use around separated by file extensions* to different directories.
 - `setup_downloads` - Torrent downloads folder setup in different drives
 - `sg_archive` - Zips SuicideGirls folders with appropriate names and moves zips to the Google Drive folder, then moves folders to the parent directory
 
-### CSS
+### [CSS](css)
 Custom styling for certain websites.
 
-### HTML
+### [HTML](html)
 - `ig_download_button` - Design of the button now used with [this user script](https://github.com/kittenparry/userscripts/tree/master/instagram_image_viewer)
 
-### JSON
+### [JSON](json)
 - `vscode_settings` - What it says
 
-### Powershell
+### [Powershell](ps1)
 - `tree` - Creates a file tree for archive/downloads folders in each drive then copies them to the dated folders in Google Drive
 
-### Python
+### [Python](py)
 - `7zipper` - Creates an archive with all the data in a folder, with password, encrypted file names, no compression and named after the hexadecimal value of the directory
 - `pixieset_downloader` - Somewhat of a clunky but semi-automatic way of downloading images from pixieset.com
 - `reader` - An attempt at creating manifest files for archive/downloads, replaced by `tree.ps1`
 - `size_checker` - Prints out the number and total size of all files in a folder (not the folders)
 - `word_counter` - Reads a .txt document, counts the number of words and outputs it, it's not the number of total words but rather a count of each individual word
 
-### Python (pyw)
+### [Python (pyw)](pyw)
 - `string-hex_converter` - A small GUI program to convert a string of text to hex and vice versa
 
-### Rust
+### [Rust](rs)
 - `sensible-random-word-generator` - Generates random words based on given length and given repetition value as arguments
 
-### Text
+### [Text](txt)
 - `vscode_extensions` - Output of the command `code --list-extensions` (probably could be turned into a batch script)
