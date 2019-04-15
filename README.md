@@ -3,11 +3,11 @@ Stuff I use around separated by file extensions* to different directories.
 
 ### [Batch](bat)
 - `archive_downloader` - An attempt on moving downloads to archive folders (incomplete)
-- `del` - Deletes unnecessary files from torrents in %dl%:\Archive\porn
+- `del` - Deletes unnecessary files from torrents in %drive_letter%:\Archive\porn
 - `logs_archive` - Copies myLogs.txt to Logs/ with dates
 - `logs_backup` - Copies myLogs.txt and Logs/ to different partitions (this copies to latest_logs/)
 - `logs_backup_with_dates` - Copies myLogs.txt and Logs/ to different partitions with dates (this copies to archived_logs/)
-- `move` - Move different types of files into appropriate folders in general downloads directory
+- `move` - Moves different types of files into appropriate folders in general downloads directory
 - `robocopy_x` - General back up scripts
 - `rpa_extractor` - RPA Extractor command with a for loop to help the extraction of all files in a path (uses an external program for the extraction, this is only a loop)
 - `search_everything_backup` - Copies Search Everything run and search history to dated folders in Google Drive
