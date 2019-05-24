@@ -21,9 +21,6 @@ Custom styling for certain websites.
 ### [HTML](html)
 - `ig_download_button` - Design of the button now used with [this user script](https://github.com/kittenparry/userscripts/tree/master/instagram_image_viewer)
 
-### [JSON](json)
-- `vscode_settings` - What it says
-
 ### [Powershell](ps1)
 - `tree` - Creates a file tree for archive/downloads folders in each drive then copies them to the dated folders in Google Drive
 
