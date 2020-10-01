@@ -3,7 +3,7 @@ REM and puts files to their places
 
 REM SET and CD to the downloads folder
 SET dh=D
-SET dl=:\dwnWin4
+SET dl=:\dwnWin5
 %dh%:
 MD %dh%%dl%
 CD %dh%%dl%

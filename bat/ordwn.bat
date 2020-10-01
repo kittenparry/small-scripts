@@ -5,7 +5,7 @@ REM direct port of its bash counterpart:
 REM https://github.com/kittenparry/dot-files/blob/master/.scripts/ordwn
 
 SET pdd=D:\git\pddcat\pddcat.py
-SET dwn=D:\dwnWin4
+SET dwn=D:\dwnWin5
 SET arch=D:\archxdwn\porn
 
 CALL move.bat
